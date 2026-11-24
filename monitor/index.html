@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISITEC · Monitor de seguimiento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="cargando">
+  <div id="acceso" class="acceso"></div>
+  <div class="pantalla-carga" aria-live="polite"><span class="brand-mark">I</span><p>Conectando con la base de datos…</p></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-cabecera">
+        <a class="brand" href="#/resumen">
+          <span class="brand-mark">I</span>
+          <span><strong>ISITEC</strong><small>MONITOR</small></span>
+        </a>
+        <button type="button" class="boton-menu" id="btnMenu" aria-expanded="false" aria-controls="menuLateral">Menú</button>
+      </div>
+
+      <div class="sidebar-menu" id="menuLateral">
+        <nav class="nav" id="nav" aria-label="Navegación principal">
+          <a class="nav-item" href="#/resumen"      data-ruta="resumen"><span id="navResumenTxt">Resumen</span></a>
+          <a class="nav-item" href="#/proyectos"    data-ruta="proyectos"><span id="navProyectosTxt">Proyectos</span><b id="navProyectos">0</b></a>
+          <a class="nav-item" href="#/alertas"      data-ruta="alertas">Alertas<b class="rojo" id="navAlertas">0</b></a>
+          <a class="nav-item" href="#/facturacion"  data-ruta="facturacion">Facturación</a>
+          <a class="nav-item" href="#/horas"        data-ruta="horas">Horas y equipo</a>
+          <a class="nav-item" href="#/calidad"      data-ruta="calidad">Calidad y pruebas<b class="ambar" id="navCalidad">0</b></a>
+          <a class="nav-item" href="#/preguntas"    data-ruta="preguntas">Preguntas<b class="ambar" id="navPreguntas">0</b></a>
+          <a class="nav-item" href="#/equipo"       data-ruta="equipo">Equipo, clientes y accesos</a>
+        </nav>
+
+        <div class="sidebar-pie">
+          <button class="nav-item nav-plano" id="btnReiniciar" title="Vuelve a los datos de ejemplo">Reiniciar datos</button>
+          <p class="estado-nube" id="estadoNube"></p>
+          <div class="perfil">
+            <span class="avatar">OP</span>
+            <span><strong>Oscar Panadero</strong><small>Gerente de proyecto</small></span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="contenido">
+      <header class="topbar">
+        <div class="miga" id="miga"></div>
+        <div class="topbar-acciones">
+          <button class="boton secundario" id="btnExportar">Exportar reporte</button>
+          <button class="boton primario" id="btnNuevaTarea">Nueva tarea</button>
+        </div>
+      </header>
+      <div id="vista" class="vista"></div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <dialog class="modal" id="modal"></dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/permisos.js"></script>
+  <script src="js/nube.js"></script>
+  <script src="js/estado.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/vistas/resumen.js"></script>
+  <script src="js/vistas/proyectos.js"></script>
+  <script src="js/vistas/proyecto.js"></script>
+  <script src="js/vistas/alertas.js"></script>
+  <script src="js/vistas/facturacion.js"></script>
+  <script src="js/vistas/horas.js"></script>
+  <script src="js/vistas/calidad.js"></script>
+  <script src="js/vistas/preguntas.js"></script>
+  <script src="js/vistas/equipo.js"></script>
+  <script src="js/vistas/gestion.js"></script>
+  <script src="js/reporte.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

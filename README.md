@@ -6,4 +6,4 @@ Monitor de seguimiento de proyectos (Sistemas Empresariales, Grupo 6, Uniandes).
 - Base de datos: Supabase (Postgres), esquema en `supabase/schema.sql`.
 - Registro e inicio de sesion con correo y contrasena.
 
-`index.html` es la version empaquetada (un solo archivo). El codigo fuente separado por archivos esta en la carpeta del equipo (`monitor/`).
+`index.html` es la version empaquetada (un solo archivo). El codigo fuente separado por archivos esta en la carpeta [`monitor/`](monitor/) de este repositorio.
